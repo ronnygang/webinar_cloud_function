@@ -1,0 +1,5 @@
+gcloud-service-key.json
+.gitlab-ci.yml
+.editorconfig
+.gitignore
+venv

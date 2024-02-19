@@ -1,0 +1,8 @@
+gcloud functions deploy gcf-pipeline-sales \
+  --runtime python39 \
+  --region us-central1 \
+  --trigger-http \
+  --timeout 540 \
+  --entry-point main \
+  --allow-unauthenticated \
+  --memory=2048MB
