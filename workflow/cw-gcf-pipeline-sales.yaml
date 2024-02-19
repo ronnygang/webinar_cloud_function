@@ -1,0 +1,12 @@
+main:
+  steps:
+    - ejecutar-cloud-function:
+        call: googleapis.cloudfunctions.v1.projects.locations.functions.call
+        args:
+            name: projects/neural-truth-406011/locations/us-central1/functions/gcf-pipeline-sales
+            body:
+                data: '{"message": "etl","date_start": "etl","date_end": "etl"}'
+        result: callResult
+        
+    - response-cloud-function:
+        return: ${callResult}
